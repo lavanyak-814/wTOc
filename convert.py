@@ -1,5 +1,8 @@
 #CONVERT
 
+WESTERN = ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#']
+CARNATIC = ['S', 'R', 'G', 'M', 'P', 'D', 'N']
+
 def get_sequence():
     print("Please enter key (in major): ")
     root = input().upper()

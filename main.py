@@ -1,7 +1,7 @@
 #lav
 
 '''
-TO DO 
+TO DO
 -get_notes
 -build_key
     -major to minor converter?
@@ -14,8 +14,6 @@ FUTURE
 import convert
 import ui
 
-WESTERN = ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#']
-CARNATIC = ['S', 'R', 'G', 'M', 'P', 'D', 'N']
 
 
 
@@ -23,11 +21,12 @@ CARNATIC = ['S', 'R', 'G', 'M', 'P', 'D', 'N']
 def main():
     root, seq = convert.get_sequence()
     print(root, seq, "-----\n")
-    notes = get_notes(seq)
-    scale = build_scale(root)
+    notes = convert.get_notes(seq)
+    scale = convert.build_scale(root)
     print("NOTES: ", notes)
     print("SCALE: ", scale)
-    print("CARNATIC: ", convert(notes, scale))
+    print("CARNATIC: ", convert.convert(notes, scale))
+    ui.piano_set_up()
     print("\ndone")
 
 
